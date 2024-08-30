@@ -474,7 +474,7 @@ if __name__ == "__main__":
     Onion = Commodity(commodity_dict["Onion"])
     commodity_list.append(Onion)
 
-    app.run()
+    app.run(debug=False,host='0.0.0.0')
 
 
 
