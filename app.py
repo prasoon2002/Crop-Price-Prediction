@@ -43,34 +43,39 @@ commodity_dict = {
     "sugarcane": "static/Sugarcane.csv",
     "sunflower": "static/Sunflower.csv",
     "urad": "static/Urad.csv",
-    "wheat": "static/Wheat.csv"
+    "wheat": "static/Wheat.csv",
+    "Potato":"static/Potato.csv",
+    "Onion":"static/Onion.csv"
+
 }
 
-annual_rainfall = [29, 21, 37.5, 30.7, 52.6, 150, 299, 251.7, 179.2, 70.5, 39.8, 10.9]
+annual_rainfall = [30.1, 22.8, 39.4, 34.7, 56.2, 155.3, 305.0, 265.8, 190.5, 74.1, 42.2, 13.3]
 base = {
-    "Paddy": 1245.5,
-    "Arhar": 3200,
-    "Bajra": 1175,
-    "Barley": 980,
-    "Copra": 5100,
-    "Cotton": 3600,
-    "Sesamum": 4200,
-    "Gram": 2800,
-    "Groundnut": 3700,
-    "Jowar": 1520,
-    "Maize": 1175,
-    "Masoor": 2800,
-    "Moong": 3500,
-    "Niger": 3500,
-    "Ragi": 1500,
-    "Rape": 2500,
-    "Jute": 1675,
-    "Safflower": 2500,
-    "Soyabean": 2200,
-    "Sugarcane": 2250,
-    "Sunflower": 3700,
-    "Urad": 4300,
-    "Wheat": 1350
+    "Paddy": 2300,
+    "Arhar": 7550,
+    "Bajra": 2625,
+    "Barley": 1735,
+    "Copra": 10860,
+    "Cotton": 6620,
+    "Sesamum": 8635,
+    "Gram": 5440,
+    "Groundnut": 6377,
+    "Jowar": 3180,
+    "Maize": 2090,
+    "Masoor": 6425,
+    "Moong": 8558,
+    "Niger": 7734,
+    "Ragi": 3846,
+    "Rape": 5650,
+    "Jute": 5050,
+    "Safflower": 5800,
+    "Soyabean": 4600,
+    "Sugarcane": 340,
+    "Sunflower": 6760,
+    "Urad": 6950,
+    "Wheat": 2275,
+    "Potato":650,
+    "Onion":5000
 
 }
 commodity_list = []
@@ -471,6 +476,10 @@ if __name__ == "__main__":
     commodity_list.append(urad)
     wheat = Commodity(commodity_dict["wheat"])
     commodity_list.append(wheat)
+    Potato = Commodity(commodity_dict["Potato"])
+    commodity_list.append(Potato)
+    Onion = Commodity(commodity_dict["Onion"])
+    commodity_list.append(Onion)
 
     app.run()
 

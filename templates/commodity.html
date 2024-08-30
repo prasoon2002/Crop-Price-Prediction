@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Apna Anaaj</title>
+  <title>Krishi Mitra</title>
   <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,18 +11,33 @@
         div.main {
             padding: 5px 50px 75px 50px;
         }
+       body{
+        background-color:#A9BA9D;
+
+       }
+       .header{
+        color: black;
+       }
+       .custom-card-panel {
+    background-color:white; /* Replace with your desired color */
+    color: black; /* Text color */
+}
+
     </style>
         
 </head>
 <body >
+  
   <div class="main">
     <div class="nav-wrapper">
+    
 
-		<h3 class="card-panel #f94c14 amber lighten-2 center valign-wrapper center"><a class="brand-logo  #f94c14-text text-lighten-4" href="#"><img alt="" src="/static/ApnaAnaajLogo.png" height="100px" width="100px" class="responsive-img" />
+      <h3 class="card-panel custom-card-panel center valign-wrapper"><a class="brand-logo" href="#" style="color: green;"></a><img alt="" src="/static/krishilogobg.png" height="100px" width="100px" class="responsive-img" />
           <span>KRISHI MITRA</span></a>
-          </a></h3><h3>
-
+          </a></h3>
 	</div>
+
+
     <h2 class="header">{{context.name}}</h2>
     <div class="row">
         <div class="col s8 m7">
@@ -56,7 +71,7 @@
     </div>
 
     <div class="col s4">
-      <div class="card grey lighten-3">
+      <div class="card white">
         <div class="card-content black-text">
            <span class="card-title">Brief Forecast</span>
           <table>
@@ -80,12 +95,12 @@
       </div>
     </div>
   </div>
-
 </div>
-  <div class="row">    
-    <div class="col s4">
-      <h5>Forecast Trends</h5>
-     <table class="striped">
+
+  <div class="row" >    
+    <div class="col s4" style="background-color:#D0D9CD;box-shadow: 5px 5px 8px #78866B; margin: auto;">
+      <h5 style="color: #687169;">Forecast Trends</h5>
+     <table class="striped"  style="color: black;">
         <thead>
           <tr>
               <th>Month</th>
@@ -105,10 +120,11 @@
         </tbody>
       </table>
 </div>
+
 <div class="col s2"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
-    <div class="chartjs-wrapper col s7 offset-s1">
+    <!-- <div class="chartjs-wrapper col s7 offset-s1">
     <canvas id="chartjs-0" class="chartjs" width="undefined" height="undefined" style=" width:800px !important;
   height:400px !important;">
     </canvas>
@@ -125,8 +141,45 @@
             }
         }]
     }}});</script>
-  </div>
+  </div> -->
+
   <div class="chartjs-wrapper col s7 offset-s1">
+    <canvas id="chartjs-0" class="chartjs" style="width: 800px !important; height: 400px !important;background-color: white;margin-bottom:55px"></canvas>
+    <script>
+        new Chart(
+            document.getElementById("chartjs-0"), {
+                "type": "line",
+                "data": {
+                    "labels": {{ context.forecast_x|safe }},
+                    "datasets": [{
+                        "label": "Next year Price",
+                        "data": {{ context.forecast_y|safe }},
+                        "fill": false,
+                        "borderColor": "rgb(75, 192, 192)",
+                        "lineTension": 0.1
+                    }]
+                },
+                "options": {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            ticks: {
+                                suggestedMin: 1000,
+                                stepSize: 200
+                            }
+                        }]
+                    }
+                }
+            }
+        );
+    </script>
+</div>
+
+
+
+  <!-- <div class="chartjs-wrapper col s7 offset-s1">
     <canvas id="chartjs-1" class="chartjs" width="undefined" height="undefined" style=" width:800px !important;
   height:400px !important;">
     </canvas>
@@ -142,7 +195,46 @@
             }
         }]
     }}});</script>
-  </div>
+  </div> -->
+
+  <div class="chartjs-wrapper col s7 offset-s1">
+    <canvas id="chartjs-1" class="chartjs" style="width: 800px !important; height: 400px !important;  background-color: white"></canvas>
+    <script>
+        new Chart(document.getElementById("chartjs-1"), {
+            type: "line",
+            data: {
+                labels: {{ context.previous_x|safe }},
+                datasets: [{
+                    label: "Previous year price",
+                    data: {{ context.previous_y|safe }},
+                    fill: false,
+                    borderColor: "rgb(75, 192, 192)",
+                    lineTension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+                            suggestedMin: 1000,
+                            stepSize: 200
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            color: "rgba(135, 206, 250, 0.1)",  /* Light blue gridlines */
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</div>
+
+
   </div>
 
 

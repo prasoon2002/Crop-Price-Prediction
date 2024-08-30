@@ -1,7 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Apna Krishi Mitra</title>
+  <title> Krishi Mitra</title>
+  <style>
+    /* Ensure the container has no scrollbars and fits the content */
+    .botpress-webchat-container {
+        overflow: hidden !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        box-sizing: border-box !important;
+    }
+  
+    /* If the bot’s content is placed within another container, target it */
+    .botpress-webchat-container .bp-chat-container {
+        width: auto !important;
+        height: auto !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        display: block !important;
+        box-sizing: border-box !important;
+    }
+  
+    /* Target the logo */
+    .botpress-webchat-container .bp-chat-logo {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+    }
+  </style>
+  
+  
   <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,95 +53,6 @@
         vertical-align: middle;
       }
   
-      /* nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 590px;
-        height: 50px;
-        background: white;
-        border-radius: 8px;
-        font-size: 0;
-        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
-        z-index: 1000;
-      }
-  
-      nav a {
-        font-size: 15px;
-        text-transform: uppercase;
-        color: rgb(12, 11, 11);
-        text-decoration: none;
-        line-height: 50px;
-        position: relative;
-        z-index: 1;
-        display: inline-block;
-        text-align: center;
-      }
-  
-      nav .animation {
-        position: absolute;
-        height: 100%;
-        top: 0;
-        z-index: 0;
-        background: #1abc9c;
-        border-radius: 8px;
-        transition: all .5s ease 0s;
-      }
-  
-      nav a:nth-child(1) {
-        width: 100px;
-      }
-  
-      nav .start-home,
-      a:nth-child(1):hover~.animation {
-        width: 100px;
-        left: 0;
-      }
-  
-      nav a:nth-child(2) {
-        width: 110px;
-      }
-  
-      nav a:nth-child(2):hover~.animation {
-        width: 110px;
-        left: 100px;
-      }
-  
-      nav a:nth-child(3) {
-        width: 100px;
-      }
-  
-      nav a:nth-child(3):hover~.animation {
-        width: 100px;
-        left: 210px;
-      }
-  
-      nav a:nth-child(4) {
-        width: 160px;
-      }
-  
-      nav a:nth-child(4):hover~.animation {
-        width: 160px;
-        left: 310px;
-      }
-  
-      nav a:nth-child(5) {
-        width: 120px;
-      }
-  
-      .nav-wrapper {
-        margin-top: 80px; /* Adjusts the space below the navbar */
-        /* text-align: center;
-      } */
-/*   
-      .nav-wrapper h3 {
-        margin: 0;
-        padding: 0;
-      } */
-   */
       .brand-logo {
         display: inline-flex;
         align-items: center;
@@ -126,12 +68,12 @@
       }
       
       .fixed-image {
-  background-image: url('/static/Untitled_Export_V2.jpeg'); /* Use your image path */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Fixes the image in place */
-  height: 100vh; /* Makes the image cover the full viewport height */
-  width: 100%;
+        background-image: url('/static/Untitled_Export_V2.jpeg'); /* Use your image path */
+        background-size: cover;
+        background-position: center;
+        /* background-attachment: fixed;  */
+        height: 100vh; /* Makes the image cover the full viewport height */
+        width: 100%;
 }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -141,39 +83,9 @@
   <body>
     
     <!-- my changes -->
-    <!-- <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Blog</a>
-      <a href="#">Portfolio</a>
-      <a href="#">Contact</a>
-      <div class="animation start-home"></div>
-    </nav> -->
-    <!-- nav bar end -->
-<!-- 
-    <div class="nav-wrapper">
-      <h3 class="card-panel amber lighten-2 center valign-wrapper">
-        <a class="brand-logo" href="#">
-          <img alt="Apna Anaaj Logo" src="/static/ApnaAnaajLogo.png" height="100px"  width="100px" class="responsive-img" />
-          <span>APNA ANAAJ</span>
-        </a>
-      </h3>
-    </div> -->
-
+    
     <div class="fixed-image"></div>
-
-    <!-- Logo and Title -->
-  
-    <!--
-  <h3 class="card-panel #ffd54f amber lighten-2 center valign-wrapper center"><img src="/static/ApnaAnaajLogo.png
-" height="70px" width="70px">Apna Anaaj</h3>
-    -->
-
-
-
-
-
-
+    
     <div class="row">
     <div class="card-panel col s9">
       <h4 class=" #e0f7fa cyan lighten-5">Top Gainers(Current trends)</h4>
@@ -423,7 +335,7 @@
       <div class="card grey lighten-4">
         <div class="card-content row valign-wrapper">
           <div class="col s3">
-          <img src="https://image.flaticon.com/icons/svg/188/188317.svg">
+          <img src="https://img.icons8.com/color/48/000000/peanuts.png">
         </div>
         <div class="col s9">
           <span class="card-title">Mustard Seed</span>
@@ -643,7 +555,7 @@
       </div>
     </a>
     </div> <div class="col s3">
-      <a href="http://localhost:5000/commodity/bajra" style="color: #000000">
+      <a href="http://localhost:5000/commodity/Potato" style="color: #000000">
       <div class="card grey lighten-4">
         <div class="card-content row valign-wrapper">
           <div class="col s3">
@@ -654,8 +566,20 @@
         </div>
         </div>
       </div>
+    </a> 
+    </div><div class="col s3">
+      <a href="http://localhost:5000/commodity/Onion" style="color: #000000">
+      <div class="card grey lighten-4">
+        <div class="card-content row valign-wrapper">
+          <div class="col s3">
+          <img src="/static/images/onion.png" style="width: 48px; height: 48px;">> 
+        </div>
+        <div class="col s9">
+          <span class="card-title">Onion</span>
+        </div>
+        </div>
+      </div>
     </a>
-    </div>
   </div>
 
 <script type="text/javascript" charset="utf-8">
@@ -663,8 +587,10 @@
     $('.slider').slider({full_width :true});
   });
 </script>
-  </div>
+<div class="botpress-webchat-container">  <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/3bc67aa9-7bbf-4745-aae3-efe4d68f5807/webchat/v2.1/config.js"></script>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </html>
