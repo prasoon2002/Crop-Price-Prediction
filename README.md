@@ -1,3 +1,0 @@
-# Crop-Price-Prediction
-
-#anshudon
